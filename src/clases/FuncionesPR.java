@@ -27,8 +27,7 @@ public class FuncionesPR extends FuncionesBase{
 			tupla.add(x);
 			tupla.add(y-1);
 			tupla.add(funcionSuma(x, y-1));
-			funcionSucesor(funcionIdentidad(2, tupla));
-			return 0;//cambiar
+			return funcionSucesor(funcionIdentidad(2, tupla));
 		}
 	}
 		
