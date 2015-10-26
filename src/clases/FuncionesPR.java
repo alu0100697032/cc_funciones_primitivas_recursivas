@@ -49,4 +49,16 @@ public class FuncionesPR extends FuncionesBase {
 	/*
 	 * Funcion potencia
 	 */
+	
+	public int funcionPotencia(int x, int y) {
+		if (y == 0) {
+			return funcionSucesor(funcionCero());
+		} else {
+			ArrayList<Integer> tupla = new ArrayList<Integer>();
+			tupla.add(x);
+			tupla.add(y - 1);
+			tupla.add(funcionPotencia(x, y - 1));
+			return funcionProducto(funcionIdentidad(0, tupla), funcionIdentidad(2, tupla));
+		}
+	}
 }
